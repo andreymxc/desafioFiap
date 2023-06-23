@@ -11,5 +11,10 @@ namespace DWFIAP.BusinessLogic.DTOs.Aluno
         public string Nome { get; set; }
         public string Usuario { get; set; }
         public string Senha { get; set; }
+
+        public CreateAlunoDTO()
+        {
+
+        }
     }
 }

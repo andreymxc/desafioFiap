@@ -1,0 +1,12 @@
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\bin\Debug\net6.0\DWFIAP.Domain.deps.json
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\bin\Debug\net6.0\DWFIAP.Domain.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\bin\Debug\net6.0\DWFIAP.Domain.pdb
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.csproj.AssemblyReference.cache
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.AssemblyInfoInputs.cache
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.AssemblyInfo.cs
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.csproj.CoreCompileInputs.cache
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\refint\DWFIAP.Domain.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\DWFIAP.Domain.pdb
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Model\obj\Debug\net6.0\ref\DWFIAP.Domain.dll

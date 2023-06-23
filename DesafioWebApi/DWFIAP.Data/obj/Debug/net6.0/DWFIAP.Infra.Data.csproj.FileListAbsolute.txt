@@ -1,0 +1,15 @@
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\bin\Debug\net6.0\DWFIAP.Infra.Data.deps.json
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\bin\Debug\net6.0\DWFIAP.Infra.Data.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\bin\Debug\net6.0\DWFIAP.Infra.Data.pdb
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\bin\Debug\net6.0\DWFIAP.Domain.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\bin\Debug\net6.0\DWFIAP.Domain.pdb
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.AssemblyInfo.cs
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.csproj.CopyComplete
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\refint\DWFIAP.Infra.Data.dll
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\DWFIAP.Infra.Data.pdb
+C:\Users\arils\Desktop\WebApiDesafio\DesafioWebApi\DWFIAP.Data\obj\Debug\net6.0\ref\DWFIAP.Infra.Data.dll

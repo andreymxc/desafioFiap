@@ -19,6 +19,16 @@ namespace DWFIAP.Infra.Data.Repositories
             _db = db;
         }
 
+        public async Task<bool> CheckIfExists(int id)
+        {
+            using (var conn = _db.CreateConnection())
+            {
+                return conn.Query<object>(
+                "SELECT 1 WHERE EXISTS (SELECT 1 FROM Aluno WHERE ID = @id)", new { id = id })
+                .Any();
+            }
+        }
+
         public async Task<Aluno> CreateAsync(Aluno aluno)
         {
             var query = @"INSERT INTO Aluno (Nome, Usuario, Senha) 
@@ -30,14 +40,14 @@ namespace DWFIAP.Infra.Data.Repositories
             parameters.Add("Usuario", aluno.Usuario, System.Data.DbType.String);
             parameters.Add("Senha", aluno.Senha, System.Data.DbType.String);
 
-            using(var conn = _db.CreateConnection())
+            using (var conn = _db.CreateConnection())
             {
-                var id = await conn.QuerySingleAsync(query, parameters);
-                aluno.Id = id;
+                var id = await conn.QuerySingleAsync<int>(query, parameters);
+                aluno.Id = (int)id;
                 return aluno;
             }
         }
-       
+
         public async Task DeleteAsync(int id)
         {
             var query = "DELETE from Aluno WHERE ID = @Id";
@@ -51,7 +61,7 @@ namespace DWFIAP.Infra.Data.Repositories
             }
         }
 
-        public async Task EditAsync(Aluno aluno)
+        public async Task<Aluno> EditAsync(Aluno aluno)
         {
             var query = @"UPDATE Aluno SET
                 Nome = @Nome,
@@ -60,7 +70,7 @@ namespace DWFIAP.Infra.Data.Repositories
                 WHERE Id = @Id";
 
             var parameters = new DynamicParameters();
-            parameters.Add("Id", aluno.Nome, System.Data.DbType.Int32);
+            parameters.Add("Id", aluno.Id, System.Data.DbType.Int32);
             parameters.Add("Nome", aluno.Nome, System.Data.DbType.String);
             parameters.Add("Usuario", aluno.Usuario, System.Data.DbType.String);
             parameters.Add("Senha", aluno.Senha, System.Data.DbType.String);
@@ -68,12 +78,19 @@ namespace DWFIAP.Infra.Data.Repositories
             using (var conn = _db.CreateConnection())
             {
                 await conn.ExecuteAsync(query, parameters);
+                return aluno;
             }
         }
 
-        public Task<ICollection<Aluno>> GetAlunosAsync()
+        public async Task<ICollection<Aluno>> GetAlunosAsync()
         {
-            throw new NotImplementedException();
+            var query = "SELECT * FROM ALUNO";
+
+            using (var connection = _db.CreateConnection())
+            {
+                var alunos = await connection.QueryAsync<Aluno>(query);
+                return alunos.ToList();
+            }
         }
 
         public async Task<Aluno> GetByIdAsync(int id)
@@ -82,7 +99,7 @@ namespace DWFIAP.Infra.Data.Repositories
 
             using (var conn = _db.CreateConnection())
             {
-                var produto = await conn.QueryFirstOrDefaultAsync<Aluno>(query, new { Id = id});
+                var produto = await conn.QueryFirstOrDefaultAsync<Aluno>(query, new { Id = id });
 
                 return produto;
             }
