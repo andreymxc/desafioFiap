@@ -22,6 +22,8 @@ namespace DWFIAP.Infra.IoC
         {
             services.AddScoped<DWFIAP.Data.Configuration.DwfiapContext>();
             services.AddScoped<IAlunoRepository, AlunoRepository>();
+            services.AddScoped<ITurmaRepository, TurmaRepository>();
+
             return services;
         }
 
@@ -30,6 +32,7 @@ namespace DWFIAP.Infra.IoC
             services.AddAutoMapper(typeof(DomainToDTOMapping));
             services.AddAutoMapper(typeof(DTOToDomainMapping));
             services.AddScoped<IAlunoService, AlunoService>();
+            services.AddScoped<ITurmaService, TurmaService>();
             return services;
         }
     }

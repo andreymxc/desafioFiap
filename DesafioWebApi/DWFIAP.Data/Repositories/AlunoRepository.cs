@@ -99,9 +99,9 @@ namespace DWFIAP.Infra.Data.Repositories
 
             using (var conn = _db.CreateConnection())
             {
-                var produto = await conn.QueryFirstOrDefaultAsync<Aluno>(query, new { Id = id });
+                var aluno = await conn.QueryFirstOrDefaultAsync<Aluno>(query, new { Id = id });
 
-                return produto;
+                return aluno;
             }
         }
     }
