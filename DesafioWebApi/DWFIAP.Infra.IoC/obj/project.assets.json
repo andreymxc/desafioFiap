@@ -135,6 +135,33 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.DependencyInjection/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -625,6 +652,19 @@
           }
         }
       },
+      "DWFIAP.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DWFIAP.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DWFIAP.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DWFIAP.Application.dll": {}
+        }
+      },
       "DWFIAP.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -633,6 +673,22 @@
         },
         "runtime": {
           "bin/placeholder/DWFIAP.Domain.dll": {}
+        }
+      },
+      "DWFIAP.Infra.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DWFIAP.Domain": "1.0.0",
+          "Dapper": "2.0.143",
+          "Microsoft.Data.SqlClient": "5.1.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DWFIAP.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DWFIAP.Infra.Data.dll": {}
         }
       }
     }
@@ -888,6 +944,64 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/7.0.0": {
+      "sha512": "elNeOmkeX3eDVG6pYVeV82p29hr+UKDaBhrZyWvWLw/EVZSYEkZlQdkp0V39k/Xehs2Qa0mvoCvkVj3eQxNQ1Q==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+      "sha512": "h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -1991,18 +2105,28 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "DWFIAP.Application/1.0.0": {
+      "type": "project",
+      "path": "../DWFIAP.BusinessLogic/DWFIAP.Application.csproj",
+      "msbuildProject": "../DWFIAP.BusinessLogic/DWFIAP.Application.csproj"
+    },
     "DWFIAP.Domain/1.0.0": {
       "type": "project",
       "path": "../DWFIAP.Model/DWFIAP.Domain.csproj",
       "msbuildProject": "../DWFIAP.Model/DWFIAP.Domain.csproj"
+    },
+    "DWFIAP.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../DWFIAP.Data/DWFIAP.Infra.Data.csproj",
+      "msbuildProject": "../DWFIAP.Data/DWFIAP.Infra.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DWFIAP.Application >= 1.0.0",
       "DWFIAP.Domain >= 1.0.0",
-      "Dapper >= 2.0.143",
-      "Microsoft.Data.SqlClient >= 5.1.1",
-      "Microsoft.Extensions.Configuration.Abstractions >= 7.0.0"
+      "DWFIAP.Infra.Data >= 1.0.0",
+      "Microsoft.Extensions.DependencyInjection >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -2013,11 +2137,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
-      "projectName": "DWFIAP.Infra.Data",
-      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
+      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj",
+      "projectName": "DWFIAP.Infra.IoC",
+      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj",
       "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\obj\\",
+      "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2040,6 +2164,12 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj": {
+              "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj"
+            },
+            "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj"
+            },
             "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
               "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
             }
@@ -2056,15 +2186,7 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Dapper": {
-            "target": "Package",
-            "version": "[2.0.143, )"
-          },
-          "Microsoft.Data.SqlClient": {
-            "target": "Package",
-            "version": "[5.1.1, )"
-          },
-          "Microsoft.Extensions.Configuration.Abstractions": {
+          "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[7.0.0, )"
           }

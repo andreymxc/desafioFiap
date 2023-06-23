@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWFIAP.BusinessLogic", "DWFIAP.BusinessLogic\DWFIAP.BusinessLogic.csproj", "{000E4F44-37AF-4DC6-A021-DE3876C793D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.Application", "DWFIAP.BusinessLogic\DWFIAP.Application.csproj", "{000E4F44-37AF-4DC6-A021-DE3876C793D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWFIAP.Data", "DWFIAP.Data\DWFIAP.Data.csproj", "{95C993AB-5567-4C6A-8CAC-2BA325FBB9D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.Infra.Data", "DWFIAP.Data\DWFIAP.Infra.Data.csproj", "{95C993AB-5567-4C6A-8CAC-2BA325FBB9D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWFIAP.Model", "DWFIAP.Model\DWFIAP.Model.csproj", "{0C0D32B6-57C3-450A-B653-9CA71AADBD07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.Domain", "DWFIAP.Model\DWFIAP.Domain.csproj", "{0C0D32B6-57C3-450A-B653-9CA71AADBD07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWFIAP.WebApi", "DWFIAP.Api\DWFIAP.WebApi.csproj", "{B6E2DF06-1119-4F46-AECB-D8FA897C0F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.WebApi", "DWFIAP.Api\DWFIAP.WebApi.csproj", "{B6E2DF06-1119-4F46-AECB-D8FA897C0F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWFIAP.Infra.IoC", "DWFIAP.Infra.IoC\DWFIAP.Infra.IoC.csproj", "{8215F568-BC29-434A-8F74-E841B20BF296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B6E2DF06-1119-4F46-AECB-D8FA897C0F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6E2DF06-1119-4F46-AECB-D8FA897C0F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6E2DF06-1119-4F46-AECB-D8FA897C0F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8215F568-BC29-434A-8F74-E841B20BF296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8215F568-BC29-434A-8F74-E841B20BF296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8215F568-BC29-434A-8F74-E841B20BF296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8215F568-BC29-434A-8F74-E841B20BF296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vVqkrk0JRZp8oFxT3nzO1t+fpb+JSkOHV3mNFvJnkiiy2ukoxa3otY+xzGR5iIyP9AWqRbnMYt7KZy+vD2tV8g==",
+  "dgSpecHash": "rEsrPX+V2kgR9UwEm98CQr0H7Gyv7/FZRCwGUJeol2EoDTB0hwOdzMHkHt9edOl6Lusam6uMP3g7tvwUTbY0Jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.BusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

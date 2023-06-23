@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "DWFIAP.Model/1.0.0": {
+      "DWFIAP.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/DWFIAP.Model.dll": {}
+          "bin/placeholder/DWFIAP.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DWFIAP.Model.dll": {}
+          "bin/placeholder/DWFIAP.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "DWFIAP.Model/1.0.0": {
+    "DWFIAP.Domain/1.0.0": {
       "type": "project",
-      "path": "../DWFIAP.Model/DWFIAP.Model.csproj",
-      "msbuildProject": "../DWFIAP.Model/DWFIAP.Model.csproj"
+      "path": "../DWFIAP.Model/DWFIAP.Domain.csproj",
+      "msbuildProject": "../DWFIAP.Model/DWFIAP.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DWFIAP.Model >= 1.0.0"
+      "DWFIAP.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -34,9 +34,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.BusinessLogic.csproj",
-      "projectName": "DWFIAP.BusinessLogic",
-      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
+      "projectName": "DWFIAP.Application",
+      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
       "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
@@ -61,8 +61,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Model.csproj": {
-              "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Model.csproj"
+            "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
+              "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
             }
           }
         }
