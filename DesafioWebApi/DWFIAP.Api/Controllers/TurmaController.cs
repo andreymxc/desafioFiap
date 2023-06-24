@@ -61,6 +61,7 @@ namespace DWFIAP.WebApi.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
             var result = await _turmaService.DeleteAsync(id);
