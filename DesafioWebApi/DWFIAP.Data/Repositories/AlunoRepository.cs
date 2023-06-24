@@ -101,6 +101,18 @@ namespace DWFIAP.Infra.Data.Repositories
             {
                 var aluno = await conn.QueryFirstOrDefaultAsync<Aluno>(query, new { Id = id });
 
+                query = @"SELECT ta.Id,
+                            ta.Curso_Id, 
+                            ta.Nome, 
+                            ta.Ano 
+                            FROM Turma AS ta
+                            JOIN Aluno_Turma AS tb ON TURMA_ID = ta.Id
+                            WHERE tb.Aluno_Id = @id;";
+
+                var turmas = await conn.QueryAsync<Turma>(query, new {Id = id});
+
+                aluno.Turmas = turmas.ToList();
+
                 return aluno;
             }
         }

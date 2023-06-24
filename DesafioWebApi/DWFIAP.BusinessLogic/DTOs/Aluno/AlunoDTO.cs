@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DWFIAP.Application.DTOs.Turma;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,11 @@ namespace DWFIAP.Application.DTOs.Aluno
         public string Nome { get; set; }
         public string Usuario { get; set; }
         public string Senha { get; set; }
+        public List<TurmaDTO> Turmas { get; set; }
 
         public AlunoDTO()
         {
-
+            Turmas = new List<TurmaDTO>();
         } 
     }
 }

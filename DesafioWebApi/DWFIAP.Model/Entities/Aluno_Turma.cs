@@ -10,5 +10,7 @@ namespace DWFIAP.Model.Entities
     {
         public int Aluno_Id { get; set; }
         public int Turma_Id { get; set; }
+        public Turma Turma { get; set; }
+        public Aluno Aluno { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DWFIAP.Application.DTOs.Aluno;
+using DWFIAP.Application.DTOs.AlunoTurma;
 using DWFIAP.Application.DTOs.Turma;
 using DWFIAP.BusinessLogic.DTOs.Aluno;
 using DWFIAP.Model.Entities;
@@ -15,6 +16,8 @@ namespace DWFIAP.Application.Mappings
 
             CreateMap<CreateTurmaDTO, Turma>();
             CreateMap<TurmaDTO, Turma>();
+
+            CreateMap<AlunoTurmaDTO, Aluno_Turma>();
         }
     }
 }
