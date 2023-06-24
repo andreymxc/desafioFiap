@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.Domain", "DWFIAP.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.WebApi", "DWFIAP.Api\DWFIAP.WebApi.csproj", "{B6E2DF06-1119-4F46-AECB-D8FA897C0F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWFIAP.Infra.IoC", "DWFIAP.Infra.IoC\DWFIAP.Infra.IoC.csproj", "{8215F568-BC29-434A-8F74-E841B20BF296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.Infra.IoC", "DWFIAP.Infra.IoC\DWFIAP.Infra.IoC.csproj", "{8215F568-BC29-434A-8F74-E841B20BF296}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8215F568-BC29-434A-8F74-E841B20BF296}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8215F568-BC29-434A-8F74-E841B20BF296}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8215F568-BC29-434A-8F74-E841B20BF296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
