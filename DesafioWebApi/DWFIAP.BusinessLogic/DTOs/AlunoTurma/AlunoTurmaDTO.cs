@@ -12,9 +12,7 @@ namespace DWFIAP.Application.DTOs.AlunoTurma
     {
         public int Aluno_Id { get; set; }
         public int Turma_Id { get; set; }
-
         public TurmaDTO Turma { get; set; }
-
         public AlunoDTO Aluno { get; set; }
   
         public AlunoTurmaDTO()

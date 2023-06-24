@@ -27,6 +27,9 @@ namespace DWFIAP.Application.Services
             if (alunoTurmaDto == null)
                 return ResultService.Fail<AlunoTurmaDTO>("Objeto deve ser informado.");
 
+            if (await _alunoTurmaRepository.CheckIfExists(alunoTurmaDto.Aluno_Id, alunoTurmaDto.Turma_Id))
+                return ResultService.Fail<AlunoTurmaDTO>("Relação de Aluno e Turma já existe!");
+
             var alunoTurma = _mapper.Map<Aluno_Turma>(alunoTurmaDto);
 
             var data = await _alunoTurmaRepository.CreateAsync(alunoTurma);
@@ -43,7 +46,7 @@ namespace DWFIAP.Application.Services
                 return ResultService.Fail("Id turma é inválido");
 
             if (await _alunoTurmaRepository.CheckIfExists(idAluno, idTurma) == false)
-                return ResultService.Fail<AlunoTurmaDTO>("Aluno Turma informado não existe.");
+                return ResultService.Fail<AlunoTurmaDTO>("Relação Aluno e Turma informado não existe.");
 
             await _alunoTurmaRepository.DeleteAsync(idAluno, idTurma);
 

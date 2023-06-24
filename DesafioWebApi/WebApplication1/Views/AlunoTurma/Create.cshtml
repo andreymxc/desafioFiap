@@ -1,0 +1,42 @@
+﻿@model DWFIAP.WebApp.Models.AlunoTurmaViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Relacionar Aluno e Turma</h1>
+
+<div class="row">
+
+@using (Html.BeginForm())
+{
+
+    <div><h2>Aluno</h2></div>
+
+    @Html.DropDownListFor(
+    x => x.Aluno_Id,
+    Model.Alunos, "Selecione o aluno...",new { @class = "form-control-mandatory" })
+    
+    <h2>Turma</h2> 
+
+     @Html.DropDownListFor(
+    x => x.Turma_Id,
+    Model.Turmas, "Selecione a turma...",new { @class = "form-control-mandatory" })
+
+    <form asp-action="Create">
+        <input type="submit" value="Registar" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+}
+
+@{
+    if (ViewBag.ErrorMessage != null)
+    {
+        <div>@ViewBag.ErrorMessage</div>
+    }
+}
+</div>
+
+  
+
