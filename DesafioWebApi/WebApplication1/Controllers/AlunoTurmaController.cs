@@ -12,7 +12,7 @@ namespace DWFIAP.WebApp.Controllers
         Uri baseAddress = new Uri("http://localhost:5096/api");
         HttpClient client;
 
-        AlunoTurmaViewModel viewModel = new AlunoTurmaViewModel();
+        AlunoTurmaRelacaoViewModel _viewModel = new AlunoTurmaRelacaoViewModel();
         public AlunoTurmaController()
         {
             client = new HttpClient();
@@ -21,14 +21,14 @@ namespace DWFIAP.WebApp.Controllers
 
         public IActionResult Index()
         {
-            List<AlunoTurmaViewModel> modelList = new List<AlunoTurmaViewModel>();
+            List<AlunoTurmaRelacaoViewModel> modelList = new List<AlunoTurmaRelacaoViewModel>();
 
             HttpResponseMessage response = client.GetAsync(client.BaseAddress + "/AlunoTurma").Result;
 
             if (response.IsSuccessStatusCode)
             {
                 string data = response.Content.ReadAsStringAsync().Result;
-                modelList = JsonConvert.DeserializeObject<RequestResponseDTO<List<AlunoTurmaViewModel>>>(data).data;
+                modelList = JsonConvert.DeserializeObject<RequestResponseDTO<List<AlunoTurmaRelacaoViewModel>>>(data).data;
             }
 
             return View(modelList);
@@ -40,15 +40,15 @@ namespace DWFIAP.WebApp.Controllers
             var alunos = GetAllAlunos();
             var turmas = GetAllTurmas();
 
-            viewModel = new AlunoTurmaViewModel();
+            _viewModel = new AlunoTurmaRelacaoViewModel();
 
-            viewModel.Alunos = alunos.Select(x => new SelectListItem
+            _viewModel.Alunos = alunos.Select(x => new SelectListItem
             {
                 Value = x.Id.ToString(),
                 Text = x.Nome
             });
 
-            viewModel.Turmas = turmas.Select(x => new SelectListItem
+            _viewModel.Turmas = turmas.Select(x => new SelectListItem
             {
                 Value = x.Id.ToString(),
                 Text = x.Nome
@@ -58,11 +58,11 @@ namespace DWFIAP.WebApp.Controllers
         public IActionResult Create()
         {
             LoadCreateViewModel();
-            return View(viewModel);
+            return View(_viewModel);
         }
               
         [HttpPost]
-        public IActionResult Create(AlunoTurmaViewModel viewModel)
+        public IActionResult Create(AlunoTurmaRelacaoViewModel model)
         {
             try
             {
@@ -70,8 +70,8 @@ namespace DWFIAP.WebApp.Controllers
 
                 var alunoTurmaDto = new AlunoTurmaDTO()
                 {
-                    Aluno_Id = viewModel.Aluno_Id,
-                    Turma_Id = viewModel.Turma_Id,
+                    Aluno_Id = model.Aluno_Id,
+                    Turma_Id = model.Turma_Id,
                 };
 
                 string data = JsonConvert.SerializeObject(alunoTurmaDto);
@@ -101,6 +101,42 @@ namespace DWFIAP.WebApp.Controllers
             }
 
             LoadCreateViewModel();
+            return View(_viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(AlunoTurmaViewModel model1)
+        {
+            try
+            {
+                HttpResponseMessage response = client.DeleteAsync(client.BaseAddress + $"/AlunoTurma/aluno/{model1.Aluno_Id}/turma/{model1.Turma_Id}").Result;
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction("Index");
+
+                throw new Exception("Erro ao excluir aluno!");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+            }
+
+            return View(model1);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int Aluno_Id, int Turma_Id)
+        {
+            HttpResponseMessage response = client.GetAsync(client.BaseAddress + $"/AlunoTurma/Aluno/{Aluno_Id}/Turma/{Turma_Id}").Result;
+
+            var viewModel = new AlunoTurmaViewModel();
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                viewModel = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoTurmaViewModel>>(data).data;
+            }
+
             return View(viewModel);
         }
 

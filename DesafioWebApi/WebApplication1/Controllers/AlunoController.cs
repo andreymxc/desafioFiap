@@ -101,16 +101,23 @@ namespace DWFIAP.WebApp.Controllers
         [HttpPost]
         public IActionResult Delete(AlunoViewModel model)
         {
-            HttpResponseMessage response = client.DeleteAsync(client.BaseAddress + $"/aluno/{model.Id}").Result;
-
-            var aluno = new AlunoViewModel();
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return RedirectToAction("Index");
+                HttpResponseMessage response = client.DeleteAsync(client.BaseAddress + $"/aluno/{model.Id}").Result;
+
+                var aluno = new AlunoViewModel();
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction("Index");
+
+                throw new Exception("Erro ao excluir aluno!");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
             }
 
-            throw new Exception("Erro ao excluir aluno");
+            return View(); 
         }
 
         [HttpGet]

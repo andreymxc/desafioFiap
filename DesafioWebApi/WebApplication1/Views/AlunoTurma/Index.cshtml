@@ -1,13 +1,13 @@
-﻿@model IEnumerable<DWFIAP.WebApp.Models.AlunoTurmaViewModel>
+﻿@model IEnumerable<DWFIAP.WebApp.Models.AlunoTurmaRelacaoViewModel>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Relação de Alunox x Turma</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Registrar aluno em turma</a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,7 @@
                 @Html.DisplayFor(modelItem => item.Turma_Id)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Delete", "Delete", new {Aluno_Id = item.Aluno_Id, Turma_Id = item.Turma_Id })
             </td>
         </tr>
 }
