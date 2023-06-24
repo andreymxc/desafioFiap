@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
-using WebApplication1.DTOs;
-using WebApplication1.Models;
+using DWFIAP.WebApp.DTOs;
+using DWFIAP.WebApp.Models;
 
-namespace WebApplication1.Controllers
+namespace DWFIAP.WebApp.Controllers
 {
     public class AlunoController : Controller
     {
@@ -40,15 +40,31 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Create(AlunoViewModel model)
         {
-            string data = JsonConvert.SerializeObject(model);
-            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PostAsync(client.BaseAddress + "/aluno", content).Result;
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return RedirectToAction("Index");
-            }
+                string data = JsonConvert.SerializeObject(model);
+                string lul = string.Empty;
 
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = client.PostAsync(client.BaseAddress + "/aluno", content).Result;
+
+                string responseContent = response.Content.ReadAsStringAsync().Result;
+                var responseObj = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(responseContent);
+
+                if(responseObj.isSuccess)
+                    return RedirectToAction("Index");
+                
+                if(responseObj.Errors != null)
+                {
+                    lul = string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
+                    throw new Exception(lul);
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = "Erro de ao realizar cadastro: \n" + ex.Message;
+            }
+          
             return View();
         }
 

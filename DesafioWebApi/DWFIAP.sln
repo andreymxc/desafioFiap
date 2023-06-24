@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.WebApi", "DWFIAP.Api
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.Infra.IoC", "DWFIAP.Infra.IoC\DWFIAP.Infra.IoC.csproj", "{8215F568-BC29-434A-8F74-E841B20BF296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DWFIAP.WebApp", "WebApplication1\DWFIAP.WebApp.csproj", "{0310AEAC-567A-460D-BB0D-CD81F85E2EFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

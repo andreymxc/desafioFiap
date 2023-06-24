@@ -35,6 +35,7 @@ namespace DWFIAP.Application.Services
                 return ResultService.RequestError<AlunoDTO>("Problemas de validação.", result);
 
             var aluno = _mapper.Map<Aluno>(alunoDTO);
+            aluno.Senha = Tools.SecretHasher.GetHashString(aluno.Senha);
 
             var data = await _alunoRepository.CreateAsync(aluno);
 
@@ -63,6 +64,8 @@ namespace DWFIAP.Application.Services
                 return ResultService.Fail<AlunoDTO>("Aluno informado não existe.");
 
             var mappedAluno = _mapper.Map<Aluno>(alunoDTO);
+
+            mappedAluno.Senha = Tools.SecretHasher.GetHashString(mappedAluno.Senha);
 
             var data = await _alunoRepository.EditAsync(mappedAluno);               
             return ResultService.Ok<AlunoDTO>(_mapper.Map<AlunoDTO>(mappedAluno));

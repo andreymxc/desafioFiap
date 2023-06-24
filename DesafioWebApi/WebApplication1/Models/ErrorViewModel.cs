@@ -1,4 +1,4 @@
-namespace WebApplication1.Models
+namespace DWFIAP.WebApp.Models
 {
     public class ErrorViewModel
     {

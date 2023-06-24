@@ -9301,9 +9301,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
+      "projectName": "DWFIAP.WebApp",
+      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
       "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",

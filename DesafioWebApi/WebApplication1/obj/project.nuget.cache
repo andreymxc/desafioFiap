@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EnQ8IVPr4o+ngnafU5wIp+ssdK+M2YAQAa5BUDjRSXzYcnHnzGfsghbI/5z1A2UkbEGnd2fzmsAi4adr0SVBRA==",
+  "dgSpecHash": "pjdhIXc7TbYmWCHkbu+DdrbMca4azT2AO++9d/OtdLsek/ydYgPl6gl3zrJQLnesVL8Q13VMGXGJUIgRKpxcBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arils\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\arils\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

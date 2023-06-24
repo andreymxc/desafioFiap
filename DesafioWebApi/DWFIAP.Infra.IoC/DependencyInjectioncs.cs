@@ -16,8 +16,6 @@ namespace DWFIAP.Infra.IoC
 {
     public static class DependencyInjection
     {
-        public static int AlunoRespository { get; private set; }
-
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<DWFIAP.Data.Configuration.DwfiapContext>();
