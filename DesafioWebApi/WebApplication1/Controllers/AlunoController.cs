@@ -81,5 +81,36 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Delete(AlunoViewModel model)
+        {
+            HttpResponseMessage response = client.DeleteAsync(client.BaseAddress + $"/aluno/{model.Id}").Result;
+
+            var aluno = new AlunoViewModel();
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+
+            throw new Exception("Erro ao excluir aluno");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            HttpResponseMessage response = client.GetAsync(client.BaseAddress + $"/aluno/{id}").Result;
+
+            var aluno = new AlunoViewModel();
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                aluno = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(data).data;
+            }
+
+            return View(aluno);
+        }
     }
 }

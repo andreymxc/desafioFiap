@@ -61,6 +61,7 @@ namespace DWFIAP.WebApi.Controllers
             return BadRequest(result);
         }
 
+        [Route("{id}")]
         [HttpDelete]
         public async Task<ActionResult> Delete(int id)
         {
