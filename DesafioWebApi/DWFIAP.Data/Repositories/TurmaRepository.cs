@@ -29,7 +29,6 @@ namespace DWFIAP.Infra.Data.Repositories
             }
         }
 
-
         public async Task<Turma> CreateAsync(Turma turma)
         {
             var query = @"INSERT INTO Turma (Curso_Id, Nome, Ano) 
