@@ -35,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/arils/Desktop/WebApiDesafio/DesafioWebApi/WebApplication1/Views/Aluno/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/arils/Desktop/WebApiDesafio/DesafioWebApi/WebApplication1/Views/Aluno/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/arils/Desktop/WebApiDesafio/DesafioWebApi/WebApplication1/Views/Turma/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybWFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/arils/Desktop/WebApiDesafio/DesafioWebApi/WebApplication1/Views/Turma/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybWFcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/arils/Desktop/WebApiDesafio/DesafioWebApi/WebApplication1/Views/Turma/Edit.cshtml]

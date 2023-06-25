@@ -29,6 +29,9 @@ namespace DWFIAP.Application.Services
             if (alunoDTO == null)
                 return ResultService.Fail<AlunoDTO>("Objeto deve ser informado.");
 
+            if (await _alunoRepository.CheckUserName(alunoDTO.Usuario))
+                return ResultService.Fail<AlunoDTO>("Nome da usuário já existe.");
+
             var result = new AlunoDTOValidator().Validate(alunoDTO);
 
             if (result.IsValid == false)

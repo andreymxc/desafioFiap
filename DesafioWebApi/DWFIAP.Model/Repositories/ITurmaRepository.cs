@@ -15,5 +15,7 @@ namespace DWFIAP.Domain.Repositories
         Task<Turma> EditAsync(Turma turma);
         Task DeleteAsync(int id);
         Task<bool> CheckIfExists(int id);
+        Task<bool> CheckName(string username);
+
     }
 }

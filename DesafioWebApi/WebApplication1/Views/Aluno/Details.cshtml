@@ -1,0 +1,55 @@
+﻿@model DWFIAP.WebApp.Models.AlunoDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1> Turmas de @Html.DisplayFor(model => model.Nome)</h1>
+
+@{
+    if (Model.Turmas != null && Model.Turmas.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Turmas.First().Curso_Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Turmas.First().Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Turmas.First().Ano)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Turmas)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Curso_Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ano)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div>Nenhuma turma registrada!</div>
+
+    }
+
+}
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

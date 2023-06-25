@@ -1,0 +1,46 @@
+﻿@model DWFIAP.WebApp.Models.TurmaDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Alunos de @Html.DisplayFor(model => model.Nome)</h1>
+
+@{
+    if (Model.Alunos != null && Model.Alunos.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Alunos.First().Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Alunos.First().Usuario)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Alunos)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Usuario)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div>Nenhum aluno registrado!</div>
+    }
+}
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

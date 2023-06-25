@@ -9,34 +9,42 @@
 
 <div class="row">
 
-@using (Html.BeginForm())
-{
+    @using (Html.BeginForm())
+    {
 
-    <div><h2>Aluno</h2></div>
+        <div><h2>Aluno</h2></div>
 
-    @Html.DropDownListFor(
+        @Html.DropDownListFor(
     x => x.Aluno_Id,
     Model.Alunos, "Selecione o aluno...",new { @class = "form-control-mandatory" })
-    
-    <h2>Turma</h2> 
 
-     @Html.DropDownListFor(
+        <h2>Turma</h2>
+
+        @Html.DropDownListFor(
     x => x.Turma_Id,
     Model.Turmas, "Selecione a turma...",new { @class = "form-control-mandatory" })
 
-    <form asp-action="Create">
-        <input type="submit" value="Registar" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-}
+        <div>
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
 
-@{
-    if (ViewBag.ErrorMessage != null)
-    {
-        <div>@ViewBag.ErrorMessage</div>
+        <form asp-action="Create">
+            <input type="submit" value="Registrar" /> |
+            <a asp-action="Index">Voltar</a>
+        </form>
     }
-}
+
+    @{
+        if (ViewBag.ErrorMessage != null)
+        {
+            <div>@ViewBag.ErrorMessage</div>
+        }
+    }
 </div>
 
-  
+
 

@@ -8,7 +8,7 @@ namespace DWFIAP.WebApp.Controllers
 {
     public class TurmaController : Controller
     {
-        Uri baseAddress = new Uri("http://localhost:5096/api");
+        Uri baseAddress = new Uri(Configuration.Config.BaseUrlApi);
         HttpClient client;
 
         public TurmaController()
@@ -98,6 +98,20 @@ namespace DWFIAP.WebApp.Controllers
             return View();
         }
 
+        public IActionResult Details(int id)
+        {
+            HttpResponseMessage response = client.GetAsync(client.BaseAddress + $"/turma/{id}").Result;
+
+            var aluno = new TurmaDetailsViewModel();
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                aluno = JsonConvert.DeserializeObject<RequestResponseDTO<TurmaDetailsViewModel>>(data).data;
+            }
+
+            return View(aluno);
+        }
 
         [HttpPost]
         public IActionResult Delete(TurmaViewModel model)

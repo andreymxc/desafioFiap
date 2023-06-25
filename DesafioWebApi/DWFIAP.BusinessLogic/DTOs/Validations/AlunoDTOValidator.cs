@@ -22,6 +22,7 @@ namespace DWFIAP.Application.DTOs.Validations
                .NotEmpty()
                .NotNull()
                .WithMessage("Nome deve ser informado.")
+               .Matches(@"^[A-Za-z\s]*$").WithMessage("Nome deve conter apenas letras")
                .MaximumLength(255).WithMessage("O nome não deve ter mais que 255 caracteres");
 
             RuleFor(p => p.Senha).NotEmpty().WithMessage("A senha não pode ser vazia")

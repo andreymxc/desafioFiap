@@ -29,6 +29,7 @@ namespace DWFIAP.Infra.Data.Repositories
             }
         }
 
+
         public async Task<Turma> CreateAsync(Turma turma)
         {
             var query = @"INSERT INTO Turma (Curso_Id, Nome, Ano) 
@@ -93,7 +94,7 @@ namespace DWFIAP.Infra.Data.Repositories
             }
         }
 
-        public  async Task<Turma> GetByIdAsync(int id)
+        public async Task<Turma> GetByIdAsync(int id)
         {
             var query = "SELECT * FROM TURMA WHERE ID = @id";
 
@@ -101,7 +102,31 @@ namespace DWFIAP.Infra.Data.Repositories
             {
                 var turma = await conn.QueryFirstOrDefaultAsync<Turma>(query, new { Id = id });
 
+                query = @"SELECT
+                            a.Id, 
+                            a.Nome, 
+                            a.Usuario,
+                            a.Senha
+                            FROM Aluno AS a
+                            JOIN Aluno_Turma AS tb ON ALUNO_ID = a.Id
+                            WHERE tb.Turma_Id = @id;";
+
+                var alunos = await conn.QueryAsync<Aluno>(query, new { Id = id });
+
+                if (alunos.Any())
+                    turma.Alunos = alunos.ToList();
+
                 return turma;
+            }
+        }
+
+        public async Task<bool> CheckName(string nome)
+        {
+            using (var conn = _db.CreateConnection())
+            {
+                 return conn.Query<object>(
+                "SELECT 1 WHERE EXISTS (SELECT 1 FROM Turma WHERE nome = @nome)", new { nome = nome })
+                .Any();
             }
         }
     }

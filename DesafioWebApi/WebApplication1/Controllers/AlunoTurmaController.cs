@@ -9,7 +9,7 @@ namespace DWFIAP.WebApp.Controllers
 {
     public class AlunoTurmaController : Controller
     {
-        Uri baseAddress = new Uri("http://localhost:5096/api");
+        Uri baseAddress = new Uri(Configuration.Config.BaseUrlApi);
         HttpClient client;
 
         AlunoTurmaRelacaoViewModel _viewModel = new AlunoTurmaRelacaoViewModel();

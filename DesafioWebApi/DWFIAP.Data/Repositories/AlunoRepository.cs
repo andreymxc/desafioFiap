@@ -19,16 +19,6 @@ namespace DWFIAP.Infra.Data.Repositories
             _db = db;
         }
 
-        public async Task<bool> CheckIfExists(int id)
-        {
-            using (var conn = _db.CreateConnection())
-            {
-                return conn.Query<object>(
-                "SELECT 1 WHERE EXISTS (SELECT 1 FROM Aluno WHERE ID = @id)", new { id = id })
-                .Any();
-            }
-        }
-
         public async Task<Aluno> CreateAsync(Aluno aluno)
         {
             var query = @"INSERT INTO Aluno (Nome, Usuario, Senha) 
@@ -109,11 +99,31 @@ namespace DWFIAP.Infra.Data.Repositories
                             JOIN Aluno_Turma AS tb ON TURMA_ID = ta.Id
                             WHERE tb.Aluno_Id = @id;";
 
-                var turmas = await conn.QueryAsync<Turma>(query, new {Id = id});
+                var turmas = await conn.QueryAsync<Turma>(query, new { Id = id });
 
                 aluno.Turmas = turmas.ToList();
 
                 return aluno;
+            }
+        }
+
+        public async Task<bool> CheckIfExists(int _id)
+        {
+            using (var conn = _db.CreateConnection())
+            {
+                return conn.Query<object>(
+                "SELECT 1 WHERE EXISTS (SELECT 1 FROM Aluno WHERE ID = @id)", new { id = _id })
+                .Any();
+            }
+        }
+
+        public async Task<bool> CheckUserName(string _usuario)
+        {
+            using (var conn = _db.CreateConnection())
+            {
+                return conn.Query<object>(
+                                "SELECT 1 WHERE EXISTS (SELECT 1 FROM Aluno WHERE usuario = @usuario)", new { usuario = _usuario })
+                                .Any();
             }
         }
     }

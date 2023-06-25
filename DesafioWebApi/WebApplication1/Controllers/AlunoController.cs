@@ -8,7 +8,7 @@ namespace DWFIAP.WebApp.Controllers
 {
     public class AlunoController : Controller
     {
-        Uri baseAddress = new Uri("http://localhost:5096/api");
+        Uri baseAddress = new Uri(Configuration.Config.BaseUrlApi);
         HttpClient client;
 
         public AlunoController()
@@ -43,7 +43,7 @@ namespace DWFIAP.WebApp.Controllers
             try
             {
                 string data = JsonConvert.SerializeObject(model);
-                string lul = string.Empty;
+                string message = string.Empty;
 
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = client.PostAsync(client.BaseAddress + "/aluno", content).Result;
@@ -51,20 +51,21 @@ namespace DWFIAP.WebApp.Controllers
                 string responseContent = response.Content.ReadAsStringAsync().Result;
                 var responseObj = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(responseContent);
 
-                if(responseObj.isSuccess)
+                if (responseObj.isSuccess)
                     return RedirectToAction("Index");
+
+                message += responseObj.message;
+
+                if (responseObj.Errors != null)
+                    message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
                 
-                if(responseObj.Errors != null)
-                {
-                    lul = string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
-                    throw new Exception(lul);
-                }
+                throw new Exception(message);
             }
             catch (Exception ex)
             {
                 ViewBag.ErrorMessage = "Erro de ao realizar cadastro: \n" + ex.Message;
             }
-          
+
             return View();
         }
 
@@ -86,17 +87,51 @@ namespace DWFIAP.WebApp.Controllers
         [HttpPost]
         public IActionResult Edit(AlunoViewModel model)
         {
-            string data = JsonConvert.SerializeObject(model);
-            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PutAsync(client.BaseAddress + "/aluno", content).Result;
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return RedirectToAction("Index");
+                string data = JsonConvert.SerializeObject(model);
+                string message = string.Empty;
+
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = client.PutAsync(client.BaseAddress + "/aluno", content).Result;
+
+                string responseContent = response.Content.ReadAsStringAsync().Result;
+                var responseObj = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(responseContent);
+
+                if (responseObj.isSuccess)
+                    return RedirectToAction("Index");
+
+                message += responseObj.message;
+
+                if (responseObj.Errors != null)
+                {
+                    message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
+                    throw new Exception(message);
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = "Erro de ao editar cadastro: \n" + ex.Message;
             }
 
             return View();
         }
+
+        public IActionResult Details(int id)
+        {
+            HttpResponseMessage response = client.GetAsync(client.BaseAddress + $"/aluno/{id}").Result;
+
+            var aluno = new AlunoDetailsViewModel();
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                aluno = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoDetailsViewModel>>(data).data;
+            }
+
+            return View(aluno);
+        }
+
 
         [HttpPost]
         public IActionResult Delete(AlunoViewModel model)
@@ -117,7 +152,7 @@ namespace DWFIAP.WebApp.Controllers
                 ViewBag.ErrorMessage = ex.Message;
             }
 
-            return View(); 
+            return View();
         }
 
         [HttpGet]

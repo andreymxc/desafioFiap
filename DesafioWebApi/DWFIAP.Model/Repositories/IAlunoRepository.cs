@@ -15,5 +15,7 @@ namespace DWFIAP.Domain.Repositories
         public Task<ICollection<Aluno>> GetAlunosAsync();
         public Task<Aluno> GetByIdAsync(int id);
         public Task<bool> CheckIfExists(int id);
+        public Task<bool> CheckUserName(string username);
+
     }
 }

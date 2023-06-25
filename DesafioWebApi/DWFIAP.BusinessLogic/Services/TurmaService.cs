@@ -26,12 +26,15 @@ namespace DWFIAP.Application.Services
         public async Task<ResultService<TurmaDTO>> CreateAsync(CreateTurmaDTO turmaDTO)
         {
             if (turmaDTO == null)
-                return ResultService.Fail<TurmaDTO>("Objeto deve ser informado.");
+                return ResultService.Fail<TurmaDTO>("Objeto deve ser informado");
+
+            if (await _turmaRepository.CheckName(turmaDTO.Nome))
+                return ResultService.Fail<TurmaDTO>("Nome da turma já existe.");
 
             var result = new TurmaDTOValidator().Validate(turmaDTO);
 
             if (result.IsValid == false)
-                return ResultService.RequestError<TurmaDTO>("Problemas de validação.", result);
+                return ResultService.RequestError<TurmaDTO>("Problemas de validação", result);
 
             var turma = _mapper.Map<Turma>(turmaDTO);
 
@@ -58,7 +61,7 @@ namespace DWFIAP.Application.Services
                 return ResultService.Fail<TurmaDTO>("Objeto deve ser informado.");
 
             if (await _turmaRepository.CheckIfExists(turmaDTO.Id) == false)
-                return ResultService.Fail<TurmaDTO>("Turma informado não existe.");
+                return ResultService.Fail<TurmaDTO>("Turma informada não existe.");
 
             var mappedTurma = _mapper.Map<Turma>(turmaDTO);
 
