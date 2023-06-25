@@ -15,6 +15,8 @@ namespace DWFIAP.Application.DTOs.Aluno
         public string Senha { get; set; }
         public List<TurmaDTO> Turmas { get; set; }
 
+        public bool Ativo { get; set; }
+
         public AlunoDTO()
         {
             Turmas = new List<TurmaDTO>();

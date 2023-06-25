@@ -21,8 +21,8 @@ namespace DWFIAP.Infra.Data.Repositories
 
         public async Task<Aluno> CreateAsync(Aluno aluno)
         {
-            var query = @"INSERT INTO Aluno (Nome, Usuario, Senha) 
-                         VALUES (@Nome, @Usuario, @Senha);" +
+            var query = @"INSERT INTO Aluno (Nome, Usuario, Senha, Ativo) 
+                         VALUES (@Nome, @Usuario, @Senha, 1);" +
                          "SELECT CAST(SCOPE_IDENTITY() AS int)";
 
             var parameters = new DynamicParameters();
@@ -40,7 +40,7 @@ namespace DWFIAP.Infra.Data.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var query = "DELETE from Aluno WHERE ID = @Id";
+            var query = "UPDATE Aluno SET ATIVO = 0 WHERE ID = @Id";
 
             var parameters = new DynamicParameters();
             parameters.Add("Id", id, System.Data.DbType.Int32);
@@ -74,7 +74,7 @@ namespace DWFIAP.Infra.Data.Repositories
 
         public async Task<ICollection<Aluno>> GetAlunosAsync()
         {
-            var query = "SELECT * FROM ALUNO";
+            var query = "SELECT * FROM ALUNO WHERE ATIVO = 1";
 
             using (var connection = _db.CreateConnection())
             {
@@ -94,7 +94,7 @@ namespace DWFIAP.Infra.Data.Repositories
                 query = @"SELECT ta.Id,
                             ta.Curso_Id, 
                             ta.Nome, 
-                            ta.Ano 
+                            ta.Ano
                             FROM Turma AS ta
                             JOIN Aluno_Turma AS tb ON TURMA_ID = ta.Id
                             WHERE tb.Aluno_Id = @id;";

@@ -13,6 +13,7 @@ namespace DWFIAP.Model.Entities
         public string Nome { get; set; }
         public string Usuario { get; set; }
         public string Senha { get; set; }
+        public bool Ativo { get; set; }
         public List<Turma> Turmas { get; set; } = new List<Turma>();
 
         public Aluno()

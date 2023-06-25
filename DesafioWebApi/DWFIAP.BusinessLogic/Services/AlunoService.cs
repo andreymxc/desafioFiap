@@ -63,12 +63,19 @@ namespace DWFIAP.Application.Services
             if (alunoDTO == null)
                 return ResultService.Fail<AlunoDTO>("Objeto deve ser informado.");
 
-            if(await _alunoRepository.CheckIfExists(alunoDTO.Id) == false)
+            var aluno = await _alunoRepository.GetByIdAsync(alunoDTO.Id);
+
+            if(aluno == null)
                 return ResultService.Fail<AlunoDTO>("Aluno informado não existe.");
 
-            var mappedAluno = _mapper.Map<Aluno>(alunoDTO);
+            var senhaIn = Tools.SecretHasher.GetHashString(alunoDTO.Senha);
 
-            mappedAluno.Senha = Tools.SecretHasher.GetHashString(mappedAluno.Senha);
+            if (senhaIn.Trim() != aluno.Senha.Trim())
+                return ResultService.Fail<AlunoDTO>("Senha inválida!");
+
+            alunoDTO.Senha = senhaIn;
+
+            var mappedAluno = _mapper.Map<Aluno>(alunoDTO);
 
             var data = await _alunoRepository.EditAsync(mappedAluno);               
             return ResultService.Ok<AlunoDTO>(_mapper.Map<AlunoDTO>(mappedAluno));

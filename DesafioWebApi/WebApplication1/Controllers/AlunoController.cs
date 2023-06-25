@@ -79,6 +79,7 @@ namespace DWFIAP.WebApp.Controllers
             {
                 string data = response.Content.ReadAsStringAsync().Result;
                 aluno = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(data).data;
+                aluno.Senha = string.Empty;
             }
 
             return View(aluno);
@@ -104,10 +105,9 @@ namespace DWFIAP.WebApp.Controllers
                 message += responseObj.message;
 
                 if (responseObj.Errors != null)
-                {
                     message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
-                    throw new Exception(message);
-                }
+
+                throw new Exception(message);
             }
             catch (Exception ex)
             {

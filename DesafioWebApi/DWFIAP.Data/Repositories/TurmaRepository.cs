@@ -51,7 +51,7 @@ namespace DWFIAP.Infra.Data.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var query = "DELETE from Turma WHERE ID = @Id";
+            var query = "UPDATE Turma SET ATIVO = 0 WHERE ID = @Id";
 
             var parameters = new DynamicParameters();
             parameters.Add("Id", id, System.Data.DbType.Int32);
@@ -85,7 +85,7 @@ namespace DWFIAP.Infra.Data.Repositories
 
         public async Task<ICollection<Turma>> GetAllAsync()
         {
-            var query = "SELECT * FROM TURMA";
+            var query = "SELECT * FROM TURMA WHERE ATIVO = 1";
 
             using (var connection = _db.CreateConnection())
             {
@@ -106,7 +106,8 @@ namespace DWFIAP.Infra.Data.Repositories
                             a.Id, 
                             a.Nome, 
                             a.Usuario,
-                            a.Senha
+                            a.Senha,
+                            a.Ativo
                             FROM Aluno AS a
                             JOIN Aluno_Turma AS tb ON ALUNO_ID = a.Id
                             WHERE tb.Turma_Id = @id;";
