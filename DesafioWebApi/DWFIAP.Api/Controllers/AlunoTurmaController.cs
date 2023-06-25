@@ -38,7 +38,7 @@ namespace DWFIAP.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] AlunoTurmaDTO alunoTurmaDto)
+        public async Task<ActionResult> Post([FromBody] CreateAlunoTurmaDTO alunoTurmaDto)
         {
             var result = await _alunoTurmaService.CreateAsync(alunoTurmaDto);
 

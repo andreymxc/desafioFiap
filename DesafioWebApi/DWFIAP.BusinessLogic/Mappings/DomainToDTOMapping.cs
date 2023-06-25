@@ -22,9 +22,7 @@ namespace DWFIAP.Application.Mappings
             CreateMap<Turma, TurmaDTO>();
             CreateMap<Turma, CreateTurmaDTO>();
 
-            CreateMap<Aluno_Turma, AlunoTurmaDTO>()
-            .ForMember(dest => dest.Turma, opt => opt.MapFrom(i => i.Turma))
-            .ForMember(dest => dest.Aluno, opt => opt.MapFrom(i => i.Aluno));
+            CreateMap<Aluno_Turma, CreateAlunoTurmaDTO>();    
         }
     }
 }

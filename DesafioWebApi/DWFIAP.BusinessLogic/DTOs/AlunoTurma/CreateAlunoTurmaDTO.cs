@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace DWFIAP.Application.DTOs.AlunoTurma
 {
-    public class AlunoTurmaDTO
+    public class CreateAlunoTurmaDTO
     {
         public int Aluno_Id { get; set; }
         public int Turma_Id { get; set; }
-        public TurmaDTO Turma { get; set; }
-        public AlunoDTO Aluno { get; set; }
-        public string NomeAluno => Aluno.Nome;
-        public string NomeTurma => Turma.Nome;
+      
+        public CreateAlunoTurmaDTO()
+        {
+
+        }
     }
 }

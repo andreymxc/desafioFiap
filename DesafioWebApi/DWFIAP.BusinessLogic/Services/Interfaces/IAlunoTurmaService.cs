@@ -9,10 +9,10 @@ namespace DWFIAP.Application.Services.Interfaces
 {
     public interface IAlunoTurmaService
     {
-        Task<ResultService<AlunoTurmaDTO>> CreateAsync(AlunoTurmaDTO aluno);
-        Task<ResultService<AlunoTurmaDTO>> GetByIdAsync(int idAluno, int idTurma);
-        Task<ResultService<AlunoTurmaDTO>> EditAsync(AlunoTurmaDTO aluno);
+        Task<ResultService<CreateAlunoTurmaDTO>> CreateAsync(CreateAlunoTurmaDTO aluno);
+        Task<ResultService<CreateAlunoTurmaDTO>> GetByIdAsync(int idAluno, int idTurma);
+        Task<ResultService<CreateAlunoTurmaDTO>> EditAsync(CreateAlunoTurmaDTO aluno);
         Task<ResultService> DeleteAsync(int idAluno, int idTurma);
-        Task<ResultService<ICollection<AlunoTurmaDTO>>> GetAllAsync();
+        Task<ResultService<ICollection<CreateAlunoTurmaDTO>>> GetAllAsync();
     }
 }
