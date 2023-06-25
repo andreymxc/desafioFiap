@@ -13,9 +13,11 @@ namespace DWFIAP.Application.Mappings
         {
             CreateMap<CreateAlunoDTO, Aluno>();
             CreateMap<AlunoDTO, Aluno>();
+            CreateMap<AlunoDTO, CreateAlunoDTO>();
 
             CreateMap<CreateTurmaDTO, Turma>();
             CreateMap<TurmaDTO, Turma>();
+            CreateMap<TurmaDTO, CreateTurmaDTO>();
 
             CreateMap<AlunoTurmaDTO, Aluno_Turma>();
         }

@@ -38,6 +38,14 @@
     <a asp-action="Index">Voltar</a>
 </div>
 
+@{
+    if (ViewBag.ErrorMessage != null)
+    {
+        <div>@ViewBag.ErrorMessage</div>
+    }
+}
+
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

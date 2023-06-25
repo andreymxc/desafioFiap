@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HyM2KfwIXAMalZ4hn2eyGVNir+YilHO6rC8jDPqyTg48Z+i5IX9gzHV4IWvYJUtjkmIg7Ums+EXYIBgwTWoF+Q==",
+  "dgSpecHash": "9DL0fvG0BbYPe62X7EQa0nUMaOXwoLJtXkeCZeQAGq6mr7Sv1QLZx0xViN7HYUEv1CK9FfFOIaFpuyHUm9Vo0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
+  "projectFilePath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arils\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\arils\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,5 +1,6 @@
 ﻿using DWFIAP.WebApp.DTOs;
 using DWFIAP.WebApp.Models;
+using DWFIAP.WebApp.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
@@ -90,12 +91,12 @@ namespace DWFIAP.WebApp.Controllers
                     if (responseObj.Errors != null)
                         message += string.Join(" ;", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
 
-                    throw new Exception(message);
+                    throw new FiapValidationException(message);
                 }
 
                 return RedirectToAction("Index");              
             }
-            catch (Exception ex)
+            catch (FiapValidationException ex)
             {
                 ViewBag.ErrorMessage = ex.Message;
             }
@@ -114,9 +115,9 @@ namespace DWFIAP.WebApp.Controllers
                 if (response.IsSuccessStatusCode)
                     return RedirectToAction("Index");
 
-                throw new Exception("Erro ao excluir aluno!");
+                throw new FiapValidationException("Erro ao excluir aluno!");
             }
-            catch (Exception ex)
+            catch (FiapValidationException ex)
             {
                 ViewBag.ErrorMessage = ex.Message;
             }

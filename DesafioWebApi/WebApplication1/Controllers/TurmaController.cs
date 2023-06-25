@@ -1,5 +1,6 @@
 ﻿using DWFIAP.WebApp.DTOs;
 using DWFIAP.WebApp.Models;
+using DWFIAP.WebApp.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -50,17 +51,18 @@ namespace DWFIAP.WebApp.Controllers
 
                 string responseContent = response.Content.ReadAsStringAsync().Result;
                 var responseObj = JsonConvert.DeserializeObject<RequestResponseDTO<TurmaViewModel>>(responseContent);
-
+                
                 if (responseObj.isSuccess)
                     return RedirectToAction("Index");
 
+                message += responseObj.message;
+
                 if (responseObj.Errors != null)
-                {
-                    message = string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
-                    throw new Exception(message);
-                }
+                    message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
+
+                throw new FiapValidationException(message);
             }
-            catch (Exception ex)
+            catch (FiapValidationException ex)
             {
                 ViewBag.ErrorMessage = "Erro de ao realizar cadastro: \n" + ex.Message;
             }
@@ -86,13 +88,30 @@ namespace DWFIAP.WebApp.Controllers
         [HttpPost]
         public IActionResult Edit(TurmaViewModel model)
         {
-            string data = JsonConvert.SerializeObject(model);
-            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PutAsync(client.BaseAddress + "/turma", content).Result;
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return RedirectToAction("Index");
+                string data = JsonConvert.SerializeObject(model);
+                string message = string.Empty;
+
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = client.PutAsync(client.BaseAddress + "/turma", content).Result;
+
+                string responseContent = response.Content.ReadAsStringAsync().Result;
+                var responseObj = JsonConvert.DeserializeObject<RequestResponseDTO<TurmaViewModel>>(responseContent);
+
+                if (responseObj.isSuccess)
+                    return RedirectToAction("Index");
+
+                message += responseObj.message;
+
+                if (responseObj.Errors != null)
+                    message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
+
+                throw new FiapValidationException(message);
+            }
+            catch (FiapValidationException ex)
+            {
+                ViewBag.ErrorMessage = "Erro de ao realizar cadastro: \n" + ex.Message;
             }
 
             return View();
@@ -125,7 +144,7 @@ namespace DWFIAP.WebApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            throw new Exception("Erro ao excluir turma");
+            throw new Exception("Erro ao excluir turma: " + response.RequestMessage);
         }
 
         [HttpGet]

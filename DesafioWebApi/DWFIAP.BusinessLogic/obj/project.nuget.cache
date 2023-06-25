@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oqqMxPTGivFhRsDadGGw9H3ohIpum3ceUMT7Y6cjUAIDKH5rffEpyHNL5RyklaymtM78khU0RZWsiqpJHFSahw==",
+  "dgSpecHash": "UJ0nPbN5m1KecrNjoB/daWSqmxGIHA/Icwok6HVGUT3VTAGAaKidJB6bM6bf0AwZFhJfPxoA++2v0tNmu5pgBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
+  "projectFilePath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arils\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\arils\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",

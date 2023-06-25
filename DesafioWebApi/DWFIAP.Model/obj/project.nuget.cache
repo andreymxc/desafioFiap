@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2X1bk7bVB1DGr+r0rcZODBgSBjuOoP6RQRvtCdDfX5y1Qa1InwQBKBQSCXUgrGMmqI69cIcPOcI9VPZgdi63wA==",
+  "dgSpecHash": "e3Qr4x4Ju1WzocjepIGS+w58P4p8OFselyzcA249+bai8Gv0PRNgzHu9/eO8az9TrlL4JdvcH/bw4h8948/W6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj",
+  "projectFilePath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

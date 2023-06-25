@@ -63,6 +63,11 @@ namespace DWFIAP.Application.Services
             if (await _turmaRepository.CheckIfExists(turmaDTO.Id) == false)
                 return ResultService.Fail<TurmaDTO>("Turma informada não existe.");
 
+            var result = new TurmaDTOValidator().Validate(_mapper.Map<CreateTurmaDTO>(turmaDTO));
+
+            if (result.IsValid == false)
+                return ResultService.RequestError<TurmaDTO>("Problemas de validação", result);
+
             var mappedTurma = _mapper.Map<Turma>(turmaDTO);
 
             var data = await _turmaRepository.EditAsync(mappedTurma);

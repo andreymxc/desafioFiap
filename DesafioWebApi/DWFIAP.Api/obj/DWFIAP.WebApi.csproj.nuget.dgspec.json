@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj": {}
+    "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj": {
+    "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj",
         "projectName": "DWFIAP.WebApi",
-        "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj",
+        "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj",
         "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Api\\obj\\",
+        "outputPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +34,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj": {
-                "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj"
+              "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj": {
+                "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj": {
+    "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
+        "projectUniqueName": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
         "projectName": "DWFIAP.Application",
-        "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
+        "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj",
         "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -107,8 +107,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
-                "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
+              "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
+                "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj": {
+    "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
         "projectName": "DWFIAP.Infra.Data",
-        "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
+        "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj",
         "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\obj\\",
+        "outputPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -181,8 +181,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
-                "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
+              "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
+                "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
               }
             }
           }
@@ -229,14 +229,14 @@
         }
       }
     },
-    "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj": {
+    "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj",
         "projectName": "DWFIAP.Infra.IoC",
-        "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj",
+        "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Infra.IoC\\DWFIAP.Infra.IoC.csproj",
         "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Infra.IoC\\obj\\",
+        "outputPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -259,14 +259,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj": {
-                "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj"
+              "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj": {
+                "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.BusinessLogic\\DWFIAP.Application.csproj"
               },
-              "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj"
+              "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Data\\DWFIAP.Infra.Data.csproj"
               },
-              "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
-                "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
+              "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
+                "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj"
               }
             }
           }
@@ -309,14 +309,14 @@
         }
       }
     },
-    "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
+    "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj",
         "projectName": "DWFIAP.Domain",
-        "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj",
+        "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\DWFIAP.Domain.csproj",
         "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Model\\obj\\",
+        "outputPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

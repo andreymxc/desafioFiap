@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System.Text;
 using DWFIAP.WebApp.DTOs;
 using DWFIAP.WebApp.Models;
+using DWFIAP.WebApp.Tools;
 
 namespace DWFIAP.WebApp.Controllers
 {
@@ -58,10 +59,10 @@ namespace DWFIAP.WebApp.Controllers
 
                 if (responseObj.Errors != null)
                     message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
-                
-                throw new Exception(message);
+
+                throw new FiapValidationException(message);
             }
-            catch (Exception ex)
+            catch (FiapValidationException ex)
             {
                 ViewBag.ErrorMessage = "Erro de ao realizar cadastro: \n" + ex.Message;
             }
@@ -107,9 +108,9 @@ namespace DWFIAP.WebApp.Controllers
                 if (responseObj.Errors != null)
                     message += string.Join(";", responseObj.Errors.Select(x => x.Message + "\n").ToArray());
 
-                throw new Exception(message);
+                throw new FiapValidationException(message);
             }
-            catch (Exception ex)
+            catch (FiapValidationException ex)
             {
                 ViewBag.ErrorMessage = "Erro de ao editar cadastro: \n" + ex.Message;
             }
@@ -136,39 +137,32 @@ namespace DWFIAP.WebApp.Controllers
         [HttpPost]
         public IActionResult Delete(AlunoViewModel model)
         {
-            try
-            {
-                HttpResponseMessage response = client.DeleteAsync(client.BaseAddress + $"/aluno/{model.Id}").Result;
-
-                var aluno = new AlunoViewModel();
-
-                if (response.IsSuccessStatusCode)
-                    return RedirectToAction("Index");
-
-                throw new Exception("Erro ao excluir aluno!");
-            }
-            catch (Exception ex)
-            {
-                ViewBag.ErrorMessage = ex.Message;
-            }
-
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            HttpResponseMessage response = client.GetAsync(client.BaseAddress + $"/aluno/{id}").Result;
+            
+            HttpResponseMessage response = client.DeleteAsync(client.BaseAddress + $"/aluno/{model.Id}").Result;
 
             var aluno = new AlunoViewModel();
 
             if (response.IsSuccessStatusCode)
-            {
-                string data = response.Content.ReadAsStringAsync().Result;
-                aluno = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(data).data;
-            }
+                return RedirectToAction("Index");
 
-            return View(aluno);
+            throw new Exception("Erro ao excluir aluno! " + response.RequestMessage);
         }
+   
+
+    [HttpGet]
+    public IActionResult Delete(int id)
+    {
+        HttpResponseMessage response = client.GetAsync(client.BaseAddress + $"/aluno/{id}").Result;
+
+        var aluno = new AlunoViewModel();
+
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            aluno = JsonConvert.DeserializeObject<RequestResponseDTO<AlunoViewModel>>(data).data;
+        }
+
+        return View(aluno);
     }
+}
 }

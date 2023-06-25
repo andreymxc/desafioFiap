@@ -9301,11 +9301,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
       "projectName": "DWFIAP.WebApp",
-      "projectPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
+      "projectPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\WebApplication1\\DWFIAP.WebApp.csproj",
       "packagesPath": "C:\\Users\\arils\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

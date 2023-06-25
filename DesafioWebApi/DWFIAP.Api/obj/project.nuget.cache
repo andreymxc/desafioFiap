@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jtfx4SZldvcaGJB0C41QF78nfGhFlbcpiyUnHMI4z5LAue7sN+nARYUNf+j4LX6dUg0DUD+4A3YXIkovfknmnw==",
+  "dgSpecHash": "3nRcu0Lf+h63fR+rQFkAQ/rGGni871lQ6+TOzd6T8A8q7q4cmI578JUFPm8g+XuxkJZQJu1lMlk21AQFu/CMNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arils\\Desktop\\WebApiDesafio\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\arils\\Source\\Repos\\desafioFiap\\DesafioWebApi\\DWFIAP.Api\\DWFIAP.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arils\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\arils\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
